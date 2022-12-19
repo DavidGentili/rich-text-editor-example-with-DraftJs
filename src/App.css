@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+.App{
+    position: relative;
+    display: flex;
+    height: auto;
+    width: 100vw;
+    padding: 36px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Helvetica, sans-serif;
+}
+
+
+
+.App .output{
+    width: 512px;
+    min-height: 128px;
+    height: auto;
+    background-color: #5985C320;
+    box-shadow: 0px 0px 10px #24242440;
+    margin-top: 36px;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+.message{
+    padding: 0;
+    background-color: #63B77160;
+    border-radius: 8px;
+    width: 256px;
+    text-align: center;
+    height: 0;
+    opacity: 0;
+    transition: .6s ease-in-out;
+}
+
+.message.show{
+    height: 48px;
+    padding: 12px 24px;
+    opacity: 1;
+    margin: 24px auto;
+}
+
+
+
+/********* MODAL ***********/
+.modalContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #24242460;
+    flex-direction: column;
+    z-index: 5;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    animation: appearElement 1s;
+}
+
+.modalWindow{
+    margin: 36px auto;
+    width: 556px;
+    height: auto;
+    max-height: 95vh;
+    padding: 48px 64px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 0 20px #24242460;
+    color: black;
+    animation: showElement 1s;
+}
+
+.modalWindow .headerModal{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin-bottom: 36px;
+}
+
+.modalWindow .headerModal h4{
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.modalWindow .headerModal button{
+    position: absolute;
+    right: 0;
+    background: none;
+    border: none;
+    opacity: .7;
+    transition: .6s;
+}
+
+.modalWindow .headerModal button:hover{
+    opacity: 1;
+}
+
+.modalWindow .headerModal button{
+    font-weight: 600;
+    font-size: 16px;
+    opacity: .6;
+    transition: .6s;
+}
+
+.modalWindow .headerModal button:hover{
+    opacity: 1;
+}
+
+.modalWindow form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.modalWindow form button{
+    display: flex;
+    margin: auto;
+    padding: 8px 16px;
+    background-color: #5985C3;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+}
+
+.modalWindow form input{
+    padding: 8px 4px;
+    border: none;
+    border-bottom: 2px solid darkgrey;
+    font-size: 12px;
+}
